@@ -1,0 +1,56 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="#F3F6FA">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="18dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="PowerBill" android:textColor="#16324F" android:textSize="28sp"
+            android:textStyle="bold"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="FESCO Electricity Bill Management" android:textColor="#64748B"
+            android:textSize="14sp" android:layout_marginBottom="14dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Dashboard summary (saved records)" android:textStyle="bold"
+            android:textColor="#16324F" android:textSize="17sp"/>
+        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:columnCount="2" android:useDefaultMargins="true" android:layout_marginBottom="14dp">
+            <include layout="@layout/card_consumers"/>
+            <include layout="@layout/card_bills"/>
+            <include layout="@layout/card_paid"/>
+            <include layout="@layout/card_unpaid"/>
+        </GridLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Add FESCO bill" android:textStyle="bold" android:textSize="20sp"
+            android:textColor="#16324F" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Enter bill details and verify them against your bill before saving."
+            android:textColor="#A05A00" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+        <EditText android:id="@+id/consumerNumber" style="@style/FormField" android:hint="Consumer ID" android:inputType="text" />
+        <EditText android:id="@+id/referenceNumber" style="@style/FormField" android:hint="Reference number" />
+        <EditText android:id="@+id/billNumber" style="@style/FormField" android:hint="Bill number" />
+        <EditText android:id="@+id/billingMonth" style="@style/FormField" android:hint="Billing month (YYYY-MM)" />
+        <EditText android:id="@+id/previousReading" style="@style/FormField" android:hint="Previous meter reading" android:inputType="number" />
+        <EditText android:id="@+id/currentReading" style="@style/FormField" android:hint="Present meter reading" android:inputType="number" />
+        <TextView android:id="@+id/unitsPreview" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Units consumed: -" android:textStyle="bold" android:textColor="#174A6E"
+            android:padding="10dp"/>
+        <EditText android:id="@+id/amountDue" style="@style/FormField" android:hint="Payable by due date (PKR)" android:inputType="numberDecimal" />
+        <EditText android:id="@+id/lateAmount" style="@style/FormField" android:hint="Payable after due date (PKR)" android:inputType="numberDecimal" />
+        <EditText android:id="@+id/issueDate" style="@style/FormField" android:hint="Issue date (YYYY-MM-DD)" />
+        <EditText android:id="@+id/dueDate" style="@style/FormField" android:hint="Due date (YYYY-MM-DD)" />
+        <CheckBox android:id="@+id/confirmed" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="I have checked these values against the original bill"/>
+        <Button android:id="@+id/saveBill" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Confirm and Save Bill" android:backgroundTint="#174A6E" android:layout_marginTop="8dp"/>
+        <Button android:id="@+id/loadSample" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Load unverified demo values" android:backgroundTint="#DCE6EF" android:textColor="#16324F"/>
+
+        <Button android:id="@+id/openConsumers" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Consumer Management" android:backgroundTint="#174A6E"/>
+        <Button android:id="@+id/openReports" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Reports &amp; Billing History" android:backgroundTint="#8B63B6"/>
+        <Button android:id="@+id/openBills" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Electricity Bill Management" android:backgroundTint="#16836B"/>
+        <TextView android:id="@+id/statusText" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Enter bill information to get started." android:textColor="#475569" android:paddingTop="12dp" android:paddingBottom="18dp"/>
+    </LinearLayout>
+</ScrollView>

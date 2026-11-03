@@ -1,0 +1,20 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F3F6FA">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Reports &amp; Billing History" android:textSize="24sp" android:textStyle="bold" android:textColor="#16324F"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Consumer 12-month history" android:textSize="18sp" android:textStyle="bold" android:textColor="#16324F" android:paddingTop="12dp"/>
+        <Spinner android:id="@+id/reportConsumer" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/loadConsumerHistory" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Show last 12 months" android:backgroundTint="#174A6E"/>
+        <TextView android:id="@+id/consumerAverage" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Average monthly bill: —" android:textColor="#16324F" android:textStyle="bold" android:padding="8dp"/>
+        <TextView android:id="@+id/consumerHistoryTable" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Month | Payable | Payments | Outstanding" android:textColor="#16324F" android:fontFamily="monospace" android:padding="8dp" android:background="#FFFFFF"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Monthly payment summary" android:textSize="18sp" android:textStyle="bold" android:textColor="#16324F" android:paddingTop="18dp"/>
+        <TextView android:id="@+id/monthlySummaryTable" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Month | Payable | Payments | Balance" android:textColor="#16324F" android:fontFamily="monospace" android:padding="8dp" android:background="#FFFFFF"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Bill status lists" android:textSize="18sp" android:textStyle="bold" android:textColor="#16324F" android:paddingTop="18dp"/>
+        <Spinner android:id="@+id/statusSelector" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/loadStatusList" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Show bills" android:backgroundTint="#16836B"/>
+        <TextView android:id="@+id/statusListOutput" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Select a status" android:textColor="#16324F" android:padding="8dp" android:background="#FFFFFF"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Payable vs payments (last 12 months)" android:textSize="18sp" android:textStyle="bold" android:textColor="#16324F" android:paddingTop="18dp"/>
+        <com.example.powerbill.MonthlyBarChart android:id="@+id/chartContainer" android:layout_width="match_parent" android:layout_height="240dp" android:background="#FFFFFF" android:padding="8dp"/>
+        <TextView android:id="@+id/reportTotals" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Period totals" android:textColor="#16324F" android:padding="12dp"/>
+    </LinearLayout>
+</ScrollView>

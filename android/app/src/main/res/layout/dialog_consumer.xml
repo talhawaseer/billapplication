@@ -1,0 +1,9 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="8dp">
+        <EditText android:id="@+id/editCommonId" style="@style/FormField" android:hint="Unique common ID *"/>
+        <EditText android:id="@+id/editConsumerName" style="@style/FormField" android:hint="Consumer name *"/>
+        <EditText android:id="@+id/editReference" style="@style/FormField" android:hint="Electricity reference number"/>
+        <EditText android:id="@+id/editNotes" style="@style/FormField" android:hint="Notes" android:inputType="textMultiLine"/>
+    </LinearLayout>
+</ScrollView>

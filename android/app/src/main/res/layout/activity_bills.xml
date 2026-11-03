@@ -1,0 +1,20 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F3F6FA">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Electricity Bill Management" android:textSize="24sp" android:textStyle="bold" android:textColor="#16324F"/>
+        <Spinner android:id="@+id/billConsumer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp"/>
+        <EditText android:id="@+id/billNumberInput" style="@style/FormField" android:hint="Bill number (unique)"/>
+        <EditText android:id="@+id/billMonthInput" style="@style/FormField" android:hint="Billing month (YYYY-MM)"/>
+        <EditText android:id="@+id/billDateInput" style="@style/FormField" android:hint="Billing / issue date (YYYY-MM-DD)"/>
+        <EditText android:id="@+id/billDueDateInput" style="@style/FormField" android:hint="Due date (YYYY-MM-DD)"/>
+        <EditText android:id="@+id/billAmountInput" style="@style/FormField" android:hint="Payable amount in PKR" android:inputType="numberDecimal"/>
+        <EditText android:id="@+id/billPreviousInput" style="@style/FormField" android:hint="Previous meter reading" android:inputType="number"/>
+        <EditText android:id="@+id/billCurrentInput" style="@style/FormField" android:hint="Current meter reading" android:inputType="number"/>
+        <TextView android:id="@+id/billUnitsPreview" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Units consumed: -" android:textColor="#174A6E" android:textStyle="bold" android:padding="8dp"/>
+        <EditText android:id="@+id/billNotesInput" style="@style/FormField" android:hint="Notes" android:inputType="textMultiLine"/>
+        <CheckBox android:id="@+id/billVerified" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="I verified these values against the bill"/>
+        <Button android:id="@+id/saveMonthlyBill" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save monthly bill" android:backgroundTint="#174A6E"/>
+        <TextView android:id="@+id/billListHeading" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Saved bills" android:textStyle="bold" android:textSize="18sp" android:textColor="#16324F" android:paddingTop="16dp"/>
+        <LinearLayout android:id="@+id/savedBillList" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"/>
+    </LinearLayout>
+</ScrollView>

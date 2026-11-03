@@ -1,0 +1,9 @@
+Add these to your existing database class; do not replace your current database class.
+
+import com.example.electricbill.data.dao.BillDao
+import com.example.electricbill.data.entity.ElectricityBillEntity
+
+// Add ElectricityBillEntity::class to @Database(entities = [...])
+// Increment the database version and implement a migration from your current schema.
+// Add this abstract DAO accessor inside the existing RoomDatabase subclass:
+abstract fun billDao(): BillDao

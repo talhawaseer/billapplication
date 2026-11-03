@@ -1,0 +1,10 @@
+<resources>
+    <style name="Theme.PowerBill" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#174A6E</item>
+        <item name="colorPrimaryVariant">#103650</item>
+        <item name="colorSecondary">#16836B</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:statusBarColor">#103650</item>
+        <item name="android:navigationBarColor">#103650</item>
+    </style>
+</resources>

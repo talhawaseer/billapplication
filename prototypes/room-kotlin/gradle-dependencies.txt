@@ -1,0 +1,8 @@
+// Merge into app/build.gradle.kts; placeholders must be replaced with versions compatible with your project.
+dependencies {
+    implementation("androidx.room:room-runtime:<room-version>")
+    implementation("androidx.room:room-ktx:<room-version>")
+    ksp("androidx.room:room-compiler:<room-version>")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:<coroutines-version>")
+}
+// Configure KSP compatible with your Kotlin plugin. If the project uses kapt, use kapt(...) instead.
